@@ -1,0 +1,25 @@
+---
+abstract: 'Find out what version of a module is installed'
+author:
+  - 'Kirrily "Skud" Robert <skud@cpan.org>'
+build_requires:
+  Test::More: '0'
+configure_requires:
+  ExtUtils::MakeMaker: '6.30'
+dynamic_config: 0
+generated_by: 'Dist::Zilla version 5.019, CPAN::Meta::Converter version 2.141170'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: '1.4'
+name: Module-InstalledVersion
+requires:
+  Carp: '0'
+  File::Spec: '0'
+  perl: '5.006'
+  strict: '0'
+  warnings: '0'
+resources:
+  homepage: https://github.com/neilbowers/Module-InstalledVersion
+  repository: https://github.com/neilbowers/Module-InstalledVersion.git
+version: 0.05_01

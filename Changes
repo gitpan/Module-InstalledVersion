@@ -1,17 +1,30 @@
-0.05    Thanks to a patch from Jos Boumans, now picks up versions 
-        in the form $Foo::Bar::VERSION
+Revision history for Perl module Module::InstalledVersion
 
-0.04    One-line change to modversion so it doesn't barf if the 
-        module isn't installed
+0.05_01 2014-06-02 NEILB
+    - The result now includes the full path to the module. RT#79217
+    - The testsuite would fail if you had developer releases (with an _ in
+      the version) of any of CPAN, Fcntl, or Text::Wrap installed. RT#38740
+    - Added other modules for getting version to SEE ALSO
+    - Switched to Dist::Zilla
+    - Added github repo to pod
+    - Reformatted this file as per CPAN::Changes::Spec
 
-0.03    Now uses File::Spec for platform independence
-        (patch provided by Ville Skyttä <ville.skytta@iki.fi>)
+0.05 2001-10-09 SKUD
+    - Thanks to a patch from Jos Boumans, now picks up versions 
+      in the form $Foo::Bar::VERSION
 
-        Included a script, "modversion", to easily find a module's
-        version.
+0.04 2001-09-20 SKUD
+    - One-line change to modversion so it doesn't barf if the 
+      module isn't installed
 
-        Now sets $m->{dir} even if it can't find a version.
+0.03 2001-09-14 SKUD
+    - Now uses File::Spec for platform independence
+      (patch provided by Ville Skyttä <ville.skytta@iki.fi>)
+    - Included a script, "modversion", to easily find a module's version.
+    - Now sets $m->{dir} even if it can't find a version.
 
-0.02    Removed an unnecessary debugging "print"
+0.02 2001-09-10 SKUD
+    - Removed an unnecessary debugging "print"
 
-0.01    Original version
+0.01 2001-09-10 SKUD
+    - Original version

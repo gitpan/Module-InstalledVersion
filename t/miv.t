@@ -33,12 +33,21 @@ foreach my $module (qw(CPAN Fcntl Text::Wrap)) {
     if (eval "require $module" ) {
         my $m = Module::InstalledVersion->new($module);
         ok($m->isa("Module::InstalledVersion"), "create new object for $module");
-        is($m->{version}, ${"${module}::VERSION"}, "Picked up version of $module");
+        is(sanitized_version($m->{version}), sanitized_version(${"${module}::VERSION"}),
+           "Picked up version of $module");
     } else {
         print STDERR "Can't require $module\n";
     }
 }
 
+sub sanitized_version
+{
+    my $version = shift;
+
+    $version =~ s/_//g;
+
+    return $version;
+}
 
 }
 
